@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveX.API", "DriveX.API\DriveX.API.csproj", "{1C5CD560-9BF4-4C90-9A6A-C71F5BAE1BD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BCB334DF-C9C3-44D8-B5C3-D2DE476C8A95}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveX.Application", "DriveX.Application\DriveX.Application.csproj", "{9726E727-D3A1-4925-84A5-A4C6B12EAE31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveX.Infrastructure", "DriveX.Infrastructure\DriveX.Infrastructure.csproj", "{27F53CCC-D47D-4537-8A84-6ABB78A811EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveX.Domain", "DriveX.Domain\DriveX.Domain.csproj", "{46154517-7598-4C68-AA44-AFBE8DD47E77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C5CD560-9BF4-4C90-9A6A-C71F5BAE1BD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C5CD560-9BF4-4C90-9A6A-C71F5BAE1BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C5CD560-9BF4-4C90-9A6A-C71F5BAE1BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C5CD560-9BF4-4C90-9A6A-C71F5BAE1BD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9726E727-D3A1-4925-84A5-A4C6B12EAE31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9726E727-D3A1-4925-84A5-A4C6B12EAE31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9726E727-D3A1-4925-84A5-A4C6B12EAE31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9726E727-D3A1-4925-84A5-A4C6B12EAE31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27F53CCC-D47D-4537-8A84-6ABB78A811EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27F53CCC-D47D-4537-8A84-6ABB78A811EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27F53CCC-D47D-4537-8A84-6ABB78A811EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27F53CCC-D47D-4537-8A84-6ABB78A811EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46154517-7598-4C68-AA44-AFBE8DD47E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46154517-7598-4C68-AA44-AFBE8DD47E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46154517-7598-4C68-AA44-AFBE8DD47E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46154517-7598-4C68-AA44-AFBE8DD47E77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+﻿services:
+  drivex.api:
+    image: drivex.api
+    build:
+      context: .
+      dockerfile: DriveX.API/Dockerfile
