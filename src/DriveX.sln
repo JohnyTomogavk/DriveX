@@ -5,6 +5,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BCB334DF-C9C3-44D8-B5C3-D2DE476C8A95}"
 	ProjectSection(SolutionItems) = preProject
 		compose.yaml = compose.yaml
+		Directory.Packages.props = Directory.Packages.props
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveX.Application", "DriveX.Application\DriveX.Application.csproj", "{9726E727-D3A1-4925-84A5-A4C6B12EAE31}"
