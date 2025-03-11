@@ -6,7 +6,7 @@ namespace DriveX.API.Extensions;
 
 public static class WebApplicationExtension
 {
-    public static void UseMinimalAPIEndpoints(this WebApplication app)
+    public static void UseMinimalApiEndpoints(this WebApplication app)
     {
         var currentAssembly = Assembly.GetEntryAssembly();
         var endpointTypes = currentAssembly!.GetTypes()

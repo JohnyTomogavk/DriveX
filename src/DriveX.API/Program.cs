@@ -22,6 +22,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
-app.UseMinimalAPIEndpoints();
+app.UseMinimalApiEndpoints();
 
 app.Run();

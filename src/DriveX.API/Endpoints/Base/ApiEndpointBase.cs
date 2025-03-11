@@ -9,7 +9,7 @@ public abstract class ApiEndpointBase
 
     public abstract HttpMethod MapMethod { get; }
 
-    public abstract RouteHandlerBuilder Configure(RouteHandlerBuilder routeBuilder);
-
     public abstract Delegate RequestHandler { get; }
+
+    public abstract RouteHandlerBuilder Configure(RouteHandlerBuilder routeBuilder);
 }
