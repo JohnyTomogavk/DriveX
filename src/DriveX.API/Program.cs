@@ -2,7 +2,6 @@ using DotNetEnv;
 using DriveX.API.Config;
 using DriveX.API.Extensions;
 using DriveX.Infrastructure.Extensions;
-using FluentValidation;
 using Scalar.AspNetCore;
 using Serilog;
 
@@ -14,9 +13,7 @@ if (env == "Development")
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddOpenApi();
-builder.Services.ConfigureSerilog();
-builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+builder.Services.ConfigureAPIServices();
 builder.Services.ConfigureInfrastructureServices();
 
 var app = builder.Build();

@@ -3,10 +3,10 @@
         <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
         <StyleCopSettingsFile>stylecop.json</StyleCopSettingsFile>
     </PropertyGroup>
-
     <ItemGroup>
         <PackageVersion Include="DotNetEnv" Version="3.1.1"/>
         <PackageVersion Include="FluentValidation" Version="11.11.0"/>
+        <PackageVersion Include="MediatR" Version="12.4.1"/>
         <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="9.0.3"/>
         <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="9.0.3"/>
         <PackageVersion Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4"/>
@@ -16,7 +16,6 @@
         <PackageVersion Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0"/>
         <PackageVersion Include="StyleCop.Analyzers" Version="1.1.118"/>
     </ItemGroup>
-
     <ItemGroup>
         <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json">
             <Link>stylecop.json</Link>
