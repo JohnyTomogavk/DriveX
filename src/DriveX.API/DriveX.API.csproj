@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="DotNetEnv" />
         <PackageReference Include="FluentValidation"/>
         <PackageReference Include="FluentValidation.DependencyInjectionExtensions"/>
         <PackageReference Include="Microsoft.AspNetCore.OpenApi"/>
@@ -30,6 +31,10 @@
     
     <ItemGroup>
         <Folder Include="logs\"/>
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\DriveX.Infrastructure\DriveX.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>
