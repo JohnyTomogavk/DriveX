@@ -1,5 +1,5 @@
 namespace DriveX.Application.Interfaces;
 
-public interface IApplicationDbContext
+public interface IAppDbContext
 {
 }
