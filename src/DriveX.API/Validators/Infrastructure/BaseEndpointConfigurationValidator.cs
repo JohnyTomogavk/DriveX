@@ -1,7 +1,7 @@
 using DriveX.API.Endpoints.Base;
 using FluentValidation;
 
-namespace DriveX.API.Validators;
+namespace DriveX.API.Validators.Infrastructure;
 
 public class BaseEndpointConfigurationValidator : AbstractValidator<ApiEndpointBase>
 {
