@@ -1,0 +1,35 @@
+<div class="app-component">
+  <div class="shadow-sm d-flex justify-content-between align-items-center app-header">
+    <div class="d-flex gap-2 justify-content-center align-items-center">
+      <img ngSrc="resources/wheel.svg" width="50" height="50" alt="Loading" class="app-logo d-block">
+      <span class="display-6">DRIVE</span>
+    </div>
+
+    <div class="d-flex justify-content-evenly align-items-center gap-2">
+      <p-button icon="pi pi-bell" size="large"/>
+      <p-button (onClick)="userOptionsPopover.toggle($event)">
+        <strong>Username</strong>
+        <p-avatar label="U"/>
+      </p-button>
+    </div>
+  </div>
+
+  <div class="app-content">
+    <div class="flex justify-center navigation-menu-wrapper">
+      <p-menu [model]="items" class="navigation-menu-component"/>
+    </div>
+    <div class="page-content">
+      <router-outlet/>
+    </div>
+  </div>
+</div>
+
+<p-popover #userOptionsPopover>
+  <span>User options:</span>
+  <ol>
+    <li>Open profile</li>
+    <li>Change theme</li>
+    <li>Change language</li>
+    <li>Logout</li>
+  </ol>
+</p-popover>

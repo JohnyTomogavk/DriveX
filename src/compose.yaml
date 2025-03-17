@@ -19,7 +19,7 @@ services:
       - "5432:5432"
     networks:
       - drivex-net
-    restart: always
+    restart: on-failure:3
     volumes:
       - pg-data:/var/lib/postgresql/data
     healthcheck:
@@ -46,7 +46,7 @@ services:
       - drivex-net
     volumes:
       - pgadmin-data:/var/lib/pgadmin
-    restart: always
+    restart: on-failure:3
     deploy:
       resources:
         limits:

@@ -1,0 +1,30 @@
+.app-component {
+  .app-header {
+    height: 8vh;
+    padding: 0 2rem;
+    min-height: fit-content;
+
+    .app-logo {
+      transform: scale(1.4);
+    }
+  }
+
+  .app-content {
+    background: var(--p-surface-200);
+    display: flex;
+    height: 92vh;
+
+    .navigation-menu-wrapper {
+      overflow: auto;
+
+      .navigation-menu-component {
+        min-height: 92vh;
+        display: flex;
+      }
+    }
+
+    .page-content {
+
+    }
+  }
+}
