@@ -468,7 +468,7 @@ export const AppThemePreset = definePreset(Material, {
                 content: {
                     background: "{surface.0}",
                     hoverBackground: "{surface.100}",
-                    borderColor: "{surface.300}",
+                    borderColor: "{surface.200}",
                     color: "{text.color}",
                     hoverColor: "{text.hover.color}"
                 },

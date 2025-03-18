@@ -3,6 +3,7 @@
     height: 8vh;
     padding: 0 2rem;
     min-height: fit-content;
+    border-bottom: 1px solid var(--p-content-border-color);
 
     .app-logo {
       transform: scale(1.4);
@@ -10,7 +11,7 @@
   }
 
   .app-content {
-    background: var(--p-surface-200);
+    background: var(--p-surface-50);
     display: flex;
     height: 92vh;
 
@@ -24,7 +25,9 @@
     }
 
     .page-content {
-
+      overflow: auto;
+      padding: 2rem;
+      width: 100%;
     }
   }
 }
