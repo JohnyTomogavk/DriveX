@@ -372,7 +372,7 @@ export const AppThemePreset = definePreset(Material, {
                 gap: "0"
             },
             item: {
-                padding: "0.75rem 1rem",
+                padding: "0.75rem 2rem",
                 borderRadius: "{border.radius.none}",
                 gap: "0.5rem"
             },

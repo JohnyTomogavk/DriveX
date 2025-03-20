@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@
 import { AppPrimeNgModule } from '../../modules/app-prime-ng.module';
 import { MenuItem } from 'primeng/api';
 import { NgOptimizedImage } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,7 @@ import { RouterOutlet } from '@angular/router';
     AppPrimeNgModule,
     NgOptimizedImage,
     RouterOutlet,
+    RouterLink,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
