@@ -8,6 +8,7 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection ConfigureInfrastructureServices(this IServiceCollection serviceCollection)
     {
         serviceCollection.ConfigureDbContext();
+        serviceCollection.ConfigureAuthentication();
 
         return serviceCollection;
     }

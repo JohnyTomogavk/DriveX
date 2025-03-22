@@ -1,5 +1,5 @@
 <div class="app-component">
-  <div class="shadow-sm d-flex justify-content-between align-items-center app-header">
+  <header class="shadow-sm d-flex justify-content-between align-items-center app-header">
 
     <div routerLink="/home" class="d-flex gap-2 justify-content-center align-items-center cursor-pointer">
       <img ngSrc="resources/wheel.svg" width="50" height="50" alt="Loading" class="app-logo d-block">
@@ -13,15 +13,15 @@
         <p-avatar label="U"/>
       </p-button>
     </div>
-  </div>
+  </header>
 
   <div class="app-content">
     <div class="flex justify-center navigation-menu-wrapper">
       <p-menu [model]="items" class="navigation-menu-component"/>
     </div>
-    <div class="page-content">
+    <main class="page-content">
       <router-outlet/>
-    </div>
+    </main>
   </div>
 </div>
 
