@@ -1,18 +1,21 @@
 @use "../../styles/styles" as *;
 
-.login-page {
+.sign-up-page {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
 
-  .login-form {
+  .sign-up-form {
     gap: $app-form-field-gap;
     margin-top: 2%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+
+    #telNumber > input {
+      display: block;
+      width: 100%;
+    }
   }
 }

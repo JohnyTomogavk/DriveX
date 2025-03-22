@@ -1,0 +1,64 @@
+<div class="sign-up-page">
+
+  <img ngSrc="/resources/wheel.svg" width="150" height="150" alt="Loading" class="d-block">
+  <p align="center" class="display-6">Регистрация</p>
+
+  <div class="sign-up-form">
+
+    <div class="row col-10 offset-4">
+
+      <div class="d-flex flex-column col-4">
+        <label for="fio" class="fw-bold">ФИО</label>
+        <input pInputText placeholder="Иванов Иван Иванович" id="fio"/>
+      </div>
+
+      <div class="d-flex flex-column col-4">
+        <label for="username" class="fw-bold">Логин</label>
+        <input pInputText id="username"/>
+      </div>
+
+    </div>
+
+    <div class="row col-10 offset-4">
+
+      <div class="d-flex flex-column col-4">
+        <label for="password" class="fw-bold">Пароль</label>
+        <input type="password" pPassword id="password"/>
+      </div>
+
+      <div class="d-flex flex-column col-4">
+        <label for="confirmedPassword" class="fw-bold">Подтвердите пароль</label>
+        <input pInputText type="password" id="confirmedPassword"/>
+      </div>
+
+    </div>
+
+    <div class="row col-10 offset-4">
+
+      <div class="d-flex flex-column col-4">
+        <label for="email" class="fw-bold">Электронная почта</label>
+        <input type="email" placeholder="driver@gmail.com" pInputText id="email"/>
+      </div>
+
+      <div class="d-flex flex-column col-4">
+        <label for="telNumber" class="fw-bold">Номер телефон</label>
+        <p-inputmask id="telNumber" mask="+375 (99) 999-99-99" placeholder="+375 (29) 123-45-56"/>
+      </div>
+
+    </div>
+
+    <div class="row col-10 offset-4 d-flex justify-content-between">
+
+      <p-button fluid class="col-6">
+        Создать аккаунт
+      </p-button>
+
+      <p-button class="col-6" text routerLink="/sign-in">
+        Уже есть аккаунт? Войдите!
+      </p-button>
+
+    </div>
+
+  </div>
+
+</div>

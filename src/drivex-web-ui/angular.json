@@ -35,7 +35,7 @@
               "src/resources"
             ],
             "styles": [
-              "src/styles.scss",
+              "src/styles/styles.scss",
               "primeicons/primeicons.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
@@ -98,7 +98,7 @@
             ],
             "styles": [
               "primeicons/primeicons.css",
-              "src/styles.scss"
+              "src/styles/styles.scss"
             ],
             "scripts": []
           }

@@ -1,10 +1,35 @@
 <div class="login-page">
-  <h3>Sign in</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, accusantium at corporis culpa dignissimos
-    doloremque dolorum enim fugiat impedit inventore ipsa labore maxime minima minus, modi molestias nam natus pariatur
-    quaerat quam rerum temporibus velit? Accusamus accusantium aut commodi, cum debitis deserunt eligendi id iure minima
-    nemo nobis provident, quam repudiandae sapiente tenetur, unde voluptate! Alias fugiat illum ipsa libero numquam
-    praesentium provident quas, reiciendis sequi tempore. Eligendi excepturi in laborum optio perferendis quae qui quia
-    quidem quo repellendus, tempore temporibus voluptas voluptate? Architecto distinctio, impedit ipsa laboriosam
-    nesciunt officia pariatur quidem quod? Aspernatur atque distinctio in maxime placeat quos.</p>
+
+  <img ngSrc="/resources/wheel.svg" width="150" height="150" alt="Loading" class="d-block">
+  <p align="center" class="display-6">Добро пожаловать!</p>
+
+  <div class="login-form">
+
+    <div class="d-flex flex-column gap-1 w-25">
+      <label for="username" class="fw-bold">Логин</label>
+      <input pInputText id="username"/>
+    </div>
+
+    <div class="d-flex flex-column gap-1 w-25">
+      <label for="password" class="fw-bold">Пароль</label>
+      <input pPassword type="password" id="password"/>
+    </div>
+
+    <div class="d-flex justify-content-between gap-1 w-25">
+      <p-button>
+        Войти
+      </p-button>
+
+      <p-button text>
+        Забыли пароль?
+      </p-button>
+    </div>
+
+    <p-divider class="w-25"/>
+
+    <p-button text routerLink="/sign-up">
+      Нет аккаунта? Зарегистрируйтесь!
+    </p-button>
+
+  </div>
 </div>

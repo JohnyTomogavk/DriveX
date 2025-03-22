@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomePageComponent } from '../pages/home-page/home-page.component';
 import { LoginPageComponent } from '../pages/login-page/login-page.component';
 import { AppNavigationLayoutComponent } from '../pages/app-navigation-layout/app-navigation-layout.component';
+import { SignUpPageComponent } from '../pages/sign-up-page/sign-up-page.component';
 
 export const routes: Routes = [
   {
@@ -20,7 +21,7 @@ export const routes: Routes = [
   },
   {
     path: 'sign-up',
-    component: LoginPageComponent
+    component: SignUpPageComponent
   },
   {
     path: '**',

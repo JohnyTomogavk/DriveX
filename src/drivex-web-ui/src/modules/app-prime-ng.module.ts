@@ -11,6 +11,10 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { PopoverModule } from 'primeng/popover';
+import { CheckboxModule } from 'primeng/checkbox';
+import { DividerModule } from 'primeng/divider';
+import { InputMaskModule } from 'primeng/inputmask';
+import { PasswordModule } from 'primeng/password';
 
 @NgModule({
   imports: [
@@ -26,6 +30,10 @@ import { PopoverModule } from 'primeng/popover';
     InputGroupModule,
     InputGroupAddonModule,
     PopoverModule,
+    CheckboxModule,
+    DividerModule,
+    InputMaskModule,
+    PasswordModule
   ],
   exports: [
     CommonModule,
@@ -40,6 +48,10 @@ import { PopoverModule } from 'primeng/popover';
     InputGroupModule,
     InputGroupAddonModule,
     PopoverModule,
+    CheckboxModule,
+    DividerModule,
+    InputMaskModule,
+    PasswordModule
   ],
   providers: [],
 })
