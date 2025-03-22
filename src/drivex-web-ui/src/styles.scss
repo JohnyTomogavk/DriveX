@@ -1,5 +1,3 @@
-@import "primeicons/primeicons.css";
-
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -8,4 +6,11 @@ body {
   overflow: hidden;
   padding: 0;
   margin: 0;
+}
+
+@mixin page-base {
+  border: 1px solid var(--p-content-border-color);
+  background-color: var(--p-content-background);
+  padding: 1rem;
+  min-height: 100%;
 }

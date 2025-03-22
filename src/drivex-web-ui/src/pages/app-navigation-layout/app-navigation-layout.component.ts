@@ -5,20 +5,19 @@ import { NgOptimizedImage } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-navigation-layout-component',
   imports: [
     AppPrimeNgModule,
     NgOptimizedImage,
     RouterOutlet,
     RouterLink,
   ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  templateUrl: './app-navigation-layout.component.html',
+  styleUrl: './app-navigation-layout.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  encapsulation: ViewEncapsulation.None
 })
-export class AppComponent implements OnInit {
+export class AppNavigationLayoutComponent implements OnInit {
   public items: MenuItem[] | undefined;
 
   ngOnInit() {
