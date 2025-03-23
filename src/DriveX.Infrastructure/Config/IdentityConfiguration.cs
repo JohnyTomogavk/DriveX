@@ -10,8 +10,17 @@ public static class IdentityConfiguration
     public static void ConfigureAuthentication(this IServiceCollection services)
     {
         services.AddIdentityCore<AppUser>();
-        services.AddIdentity<AppUser, IdentityRole>()
+        services.AddIdentity<AppUser, IdentityRole>(
+                options =>
+                {
+                    options.Password.RequireDigit = true;
+                    options.Password.RequireNonAlphanumeric = false;
+                    options.Password.RequireUppercase = false;
+
+                    options.User.RequireUniqueEmail = true;
+                })
             .AddEntityFrameworkStores<AppDbContext>()
-            .AddDefaultTokenProviders();
+            .AddDefaultTokenProviders()
+            .AddErrorDescriber<AppIdentityErrorDescriber>();
     }
 }

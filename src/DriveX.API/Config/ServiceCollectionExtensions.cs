@@ -1,4 +1,4 @@
-using FluentValidation;
+using FastEndpoints;
 
 namespace DriveX.API.Config;
 
@@ -8,8 +8,8 @@ public static class ServiceCollectionExtensions
     {
         services.AddOpenApi();
         services.ConfigureSerilog();
-        services.AddValidatorsFromAssemblyContaining<Program>();
         services.ConfigureMetiatR();
+        services.AddFastEndpoints();
 
         return services;
     }

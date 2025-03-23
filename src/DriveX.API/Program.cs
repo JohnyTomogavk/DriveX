@@ -1,8 +1,8 @@
 using DotNetEnv;
 using DriveX.API.Config;
-using DriveX.API.Extensions;
-using DriveX.Domain.Entities;
+using DriveX.API.Middlewares;
 using DriveX.Infrastructure.Extensions;
+using FastEndpoints;
 using Scalar.AspNetCore;
 using Serilog;
 
@@ -14,16 +14,23 @@ if (env == "Development")
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.ConfigureAPIServices();
 builder.Services.ConfigureInfrastructureServices();
 
 builder.Services.AddAuthentication();
 builder.Services.AddAuthorization();
 
+builder.Services.AddProblemDetails();
+
 var app = builder.Build();
+
+app.UseExceptionHandler();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseFastEndpoints(opt => { opt.Endpoints.RoutePrefix = "api"; });
 
 if (app.Environment.IsDevelopment())
 {
@@ -33,6 +40,5 @@ if (app.Environment.IsDevelopment())
 
 app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
-app.UseMinimalApiEndpoints();
 
 app.Run();

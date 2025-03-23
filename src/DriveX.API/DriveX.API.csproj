@@ -9,8 +9,7 @@
 
     <ItemGroup>
         <PackageReference Include="DotNetEnv" />
-        <PackageReference Include="FluentValidation"/>
-        <PackageReference Include="FluentValidation.DependencyInjectionExtensions"/>
+        <PackageReference Include="FastEndpoints" />
         <PackageReference Include="MediatR" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design">

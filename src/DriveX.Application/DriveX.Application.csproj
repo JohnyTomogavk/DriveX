@@ -6,4 +6,17 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="MediatR" />
+      <PackageReference Include="Microsoft.Extensions.Identity.Core" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DriveX.Domain\DriveX.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageVersion Update="MediatR" Version="12.4.1" />
+    </ItemGroup>
+
 </Project>
