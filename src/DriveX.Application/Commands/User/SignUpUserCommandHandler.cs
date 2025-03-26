@@ -8,7 +8,7 @@ namespace DriveX.Application.Commands.User;
 
 public record SignUpUserRequest : IRequest
 {
-    public required string FIO { get; init; }
+    public required string FullName { get; init; }
     public required string UserName { get; init; }
     public required string Password { get; init; }
     public required string Email { get; init; }
@@ -19,12 +19,10 @@ public record SignUpUserRequest : IRequest
 public class SignUpUserCommandHandler : IRequestHandler<SignUpUserRequest>
 {
     private readonly UserManager<AppUser> _userManager;
-    private readonly IUserStore<AppUser> _userStore;
 
-    public SignUpUserCommandHandler(UserManager<AppUser> userManager, IUserStore<AppUser> userStore)
+    public SignUpUserCommandHandler(UserManager<AppUser> userManager)
     {
         _userManager = userManager;
-        _userStore = userStore;
     }
 
     public async Task Handle(SignUpUserRequest request, CancellationToken cancellationToken)
@@ -40,7 +38,7 @@ public class SignUpUserCommandHandler : IRequestHandler<SignUpUserRequest>
             UserName = request.UserName,
             Email = request.Email,
             PhoneNumber = request.PhoneNumber,
-            FIO = request.FIO,
+            FIO = request.FullName,
         };
 
         var userCreationResult = await _userManager.CreateAsync(user, request.Password);

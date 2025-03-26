@@ -1,10 +1,10 @@
 using DriveX.Application.Commands.User;
 
-namespace DriveX.API.Dto;
+namespace DriveX.API.Dto.Requests;
 
-public record SignUpUserDto
+public record SignUpUserRequestDto
 {
-    public string FIO { get; init; }
+    public string FullName { get; init; }
     public string UserName { get; init; }
     public string Password { get; init; }
     public string ConfirmedPassword { get; init; }
@@ -15,7 +15,7 @@ public record SignUpUserDto
     {
         return new SignUpUserRequest
         {
-            FIO = FIO,
+            FullName = FullName,
             UserName = UserName,
             Password = Password,
             Email = Email,

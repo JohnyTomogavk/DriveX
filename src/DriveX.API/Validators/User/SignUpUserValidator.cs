@@ -1,14 +1,15 @@
 using DriveX.API.Dto;
+using DriveX.API.Dto.Requests;
 using FastEndpoints;
 using FluentValidation;
 
 namespace DriveX.API.Validators.User;
 
-public class SignUpUserValidator : Validator<SignUpUserDto>
+public class SignUpUserValidator : Validator<SignUpUserRequestDto>
 {
     public SignUpUserValidator()
     {
-        RuleFor(dto => dto.FIO)
+        RuleFor(dto => dto.FullName)
             .NotNull()
             .NotEmpty()
             .Matches("^[А-ЯЁA-Z][а-яёa-z-]{1,49}(?:\\s[А-ЯЁA-Z][а-яёa-z-]{1,49}){2}$")
@@ -39,6 +40,6 @@ public class SignUpUserValidator : Validator<SignUpUserDto>
         RuleFor(dto => dto.PhoneNumber)
             .Matches("^\\+375\\s\\(\\d{2}\\)\\s\\d{3}-\\d{2}-\\d{2}$")
             .WithMessage("Номер телефона не соответствует допустимому формату")
-            .When(phoneNumber => phoneNumber != null);
+            .When(dto => !string.IsNullOrEmpty(dto.PhoneNumber));
     }
 }

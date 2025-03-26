@@ -1,35 +1,32 @@
 <div class="login-page">
-
-  <img ngSrc="/resources/wheel.svg" width="150" height="150" alt="Loading" class="d-block">
-  <p align="center" class="display-6">Добро пожаловать!</p>
+  <img ngSrc="assets/wheel.svg" width="150" height="150" alt="Loading" class="d-block">
+  <p align="center" class="display-6">{{ 'LOGIN_PAGE.TITLE' | translate }}</p>
 
   <div class="login-form">
-
     <div class="d-flex flex-column gap-1 w-25">
-      <label for="username" class="fw-bold">Логин</label>
+      <label for="username" class="fw-bold">{{ 'LOGIN_PAGE.LABELS.USERNAME' | translate }}</label>
       <input pInputText id="username"/>
     </div>
 
     <div class="d-flex flex-column gap-1 w-25">
-      <label for="password" class="fw-bold">Пароль</label>
+      <label for="password" class="fw-bold">{{ 'LOGIN_PAGE.LABELS.PASSWORD' | translate }}</label>
       <input pInputText type="password" id="password"/>
     </div>
 
     <div class="d-flex justify-content-between gap-1 w-25">
       <p-button>
-        Войти
+        {{ 'LOGIN_PAGE.BUTTONS.LOGIN' | translate }}
       </p-button>
 
       <p-button text>
-        Забыли пароль?
+        {{ 'LOGIN_PAGE.BUTTONS.FORGOT_PASSWORD' | translate }}
       </p-button>
     </div>
 
     <p-divider class="w-25"/>
 
-    <p-button text routerLink="/sign-up">
-      Нет аккаунта? Зарегистрируйтесь!
+    <p-button text [routerLink]="'/' + RoutingConstants.SIGN_UP_ROUTE">
+      {{ 'LOGIN_PAGE.BUTTONS.NO_ACCOUNT' | translate }}
     </p-button>
-
   </div>
 </div>

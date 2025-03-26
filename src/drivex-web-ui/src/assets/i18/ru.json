@@ -1,0 +1,42 @@
+{
+  "VALIDATION": {
+    "REQUIRED": "Поле обязательно для заполнения",
+    "MINLENGTH": "Минимальная длинная поля: {{length}}",
+    "PASSWORD_INVALID_FORMAT": "Пароль должен содержать буквы и цифры",
+    "PASSWORDS_MISMATCH": "Пароли не совпадают",
+    "EMAIL": "Некорректный формат электронной почты",
+    "INVALID_FULLNAME": "Некорректно введены фамилия имя либо отчество",
+    "INVALID_USERNAME_FORMAT": "Некорректно введен логин"
+  },
+  "SIGN_UP_FORM": {
+    "TITLE": "Регистрация",
+    "FULL_NAME": "ФИО",
+    "LOGIN": "Логин",
+    "PASSWORD": "Пароль",
+    "CONFIRM_PASSWORD": "Подтвердите пароль",
+    "EMAIL": "Электронная почта",
+    "PHONE_NUMBER": "Номер телефона",
+    "CREATE_ACCOUNT": "Создать аккаунт",
+    "ALREADY_HAVE_ACCOUNT": "Уже есть аккаунт? Войдите!",
+    "PLACEHOLDERS": {
+      "FULL_NAME": "Иванов Иван Иванович",
+      "EMAIL": "driver@gmail.com",
+      "PHONE": "+375 (29) 123-45-56",
+      "PASSWORD": "Пароль",
+      "CONFIRM_PASSWORD": "Подтвердите пароль",
+      "LOGIN": "Логин"
+    }
+  },
+  "LOGIN_PAGE": {
+    "TITLE": "Добро пожаловать!",
+    "LABELS": {
+      "USERNAME": "Логин",
+      "PASSWORD": "Пароль"
+    },
+    "BUTTONS": {
+      "LOGIN": "Войти",
+      "FORGOT_PASSWORD": "Забыли пароль?",
+      "NO_ACCOUNT": "Нет аккаунта? Зарегистрируйтесь!"
+    }
+  }
+}

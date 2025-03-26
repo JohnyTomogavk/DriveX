@@ -1,64 +1,76 @@
 <div class="sign-up-page">
+  <img ngSrc="assets/wheel.svg" width="150" height="150" alt="Loading" class="d-block" priority>
+  <p align="center" class="display-6">{{ 'SIGN_UP_FORM.TITLE' | translate }}</p>
 
-  <img ngSrc="/resources/wheel.svg" width="150" height="150" alt="Loading" class="d-block">
-  <p align="center" class="display-6">Регистрация</p>
-
-  <div class="sign-up-form">
-
+  <form [formGroup]="signUpForm" class="sign-up-form">
     <div class="row col-10 offset-4">
-
       <div class="d-flex flex-column col-4">
-        <label for="fio" class="fw-bold">ФИО</label>
-        <input pInputText placeholder="Иванов Иван Иванович" id="fio"/>
+        <label for="fullName" class="fw-bold">{{ 'SIGN_UP_FORM.FULL_NAME' | translate }}</label>
+        <input formControlName="fullName" pInputText [placeholder]="'SIGN_UP_FORM.PLACEHOLDERS.FULL_NAME' | translate"
+               id="fullName"/>
+        <small class="text-danger" *ngIf="signUpForm.get('fullName')?.touched">
+          {{ signUpForm.get('fullName')?.errors | formError | translate }}
+        </small>
       </div>
 
       <div class="d-flex flex-column col-4">
-        <label for="username" class="fw-bold">Логин</label>
-        <input pInputText id="username"/>
+        <label for="username" class="fw-bold">{{ 'SIGN_UP_FORM.LOGIN' | translate }}</label>
+        <input formControlName="userName" pInputText id="username"
+               [placeholder]="'SIGN_UP_FORM.PLACEHOLDERS.LOGIN' | translate"/>
+        <small class="text-danger" *ngIf="signUpForm.get('userName')?.touched">
+          {{ signUpForm.get('userName')?.errors | formError | translate: { length: userConstants.MinLoginLength } }}
+        </small>
       </div>
-
     </div>
 
     <div class="row col-10 offset-4">
-
       <div class="d-flex flex-column col-4">
-        <label for="password" class="fw-bold">Пароль</label>
-        <input type="password" pPassword id="password"/>
+        <label for="password" class="fw-bold">{{ 'SIGN_UP_FORM.PASSWORD' | translate }}</label>
+        <input formControlName="password" type="password" pPassword id="password" [feedback]="false"
+               [placeholder]="'SIGN_UP_FORM.PLACEHOLDERS.PASSWORD' | translate"/>
+        <small class="text-danger" *ngIf="signUpForm.get('password')?.touched">
+          {{ signUpForm.get('password')?.errors | formError | translate: { length: userConstants.MinPasswordLength } }}
+        </small>
       </div>
 
       <div class="d-flex flex-column col-4">
-        <label for="confirmedPassword" class="fw-bold">Подтвердите пароль</label>
-        <input pInputText type="password" id="confirmedPassword"/>
+        <label for="confirmedPassword" class="fw-bold">{{ 'SIGN_UP_FORM.CONFIRM_PASSWORD' | translate }}</label>
+        <input formControlName="confirmedPassword" type="password" id="confirmedPassword" pInputText
+               [placeholder]="'SIGN_UP_FORM.PLACEHOLDERS.CONFIRM_PASSWORD' | translate"/>
+        <small class="text-danger" *ngIf="signUpForm.get('confirmedPassword')?.touched">
+          {{ signUpForm.get('confirmedPassword')?.errors | formError | translate }}
+        </small>
       </div>
-
     </div>
 
     <div class="row col-10 offset-4">
-
       <div class="d-flex flex-column col-4">
-        <label for="email" class="fw-bold">Электронная почта</label>
-        <input type="email" placeholder="driver@gmail.com" pInputText id="email"/>
+        <label for="email" class="fw-bold">{{ 'SIGN_UP_FORM.EMAIL' | translate }}</label>
+        <input formControlName="email" type="email" pInputText id="email"
+               [placeholder]="'SIGN_UP_FORM.PLACEHOLDERS.EMAIL' | translate"/>
+        <small class="text-danger" *ngIf="signUpForm.get('email')?.touched">
+          {{ signUpForm.get('email')?.errors | formError | translate }}
+        </small>
       </div>
 
       <div class="d-flex flex-column col-4">
-        <label for="telNumber" class="fw-bold">Номер телефон</label>
-        <p-inputmask id="telNumber" mask="+375 (99) 999-99-99" placeholder="+375 (29) 123-45-56"/>
+        <label for="telNumber" class="fw-bold">{{ 'SIGN_UP_FORM.PHONE_NUMBER' | translate }}</label>
+        <p-inputmask formControlName="phoneNumber" id="telNumber" mask="+375 (99) 999-99-99"
+                     [placeholder]="'SIGN_UP_FORM.PLACEHOLDERS.PHONE' | translate"/>
+        <small class="text-danger" *ngIf="signUpForm.get('phoneNumber')?.touched">
+          {{ signUpForm.get('phoneNumber')?.errors | formError | translate }}
+        </small>
       </div>
-
     </div>
 
     <div class="row col-10 offset-4 d-flex justify-content-between">
-
-      <p-button fluid class="col-6">
-        Создать аккаунт
+      <p-button (onClick)="onSignUpClick()" [loading]="isLoading()" fluid class="col-5">
+        {{ 'SIGN_UP_FORM.CREATE_ACCOUNT' | translate }}
       </p-button>
 
-      <p-button class="col-6" text routerLink="/sign-in">
-        Уже есть аккаунт? Войдите!
+      <p-button class="col-6" text [routerLink]="'/' + RoutingConstants.SIGN_IN_ROUTE">
+        {{ 'SIGN_UP_FORM.ALREADY_HAVE_ACCOUNT' | translate }}
       </p-button>
-
     </div>
-
-  </div>
-
+  </form>
 </div>

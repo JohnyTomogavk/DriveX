@@ -3,6 +3,7 @@ import { HomePageComponent } from '../pages/home-page/home-page.component';
 import { LoginPageComponent } from '../pages/login-page/login-page.component';
 import { AppNavigationLayoutComponent } from '../pages/app-navigation-layout/app-navigation-layout.component';
 import { SignUpPageComponent } from '../pages/sign-up-page/sign-up-page.component';
+import { RoutingConstants } from '../constants/routing.constants';
 
 export const routes: Routes = [
   {
@@ -10,17 +11,17 @@ export const routes: Routes = [
     component: AppNavigationLayoutComponent,
     children: [
       {
-        path: 'home',
+        path: RoutingConstants.HOME,
         component: HomePageComponent
       },
     ]
   },
   {
-    path: 'sign-in',
+    path: RoutingConstants.SIGN_IN_ROUTE,
     component: LoginPageComponent
   },
   {
-    path: 'sign-up',
+    path: RoutingConstants.SIGN_UP_ROUTE,
     component: SignUpPageComponent
   },
   {

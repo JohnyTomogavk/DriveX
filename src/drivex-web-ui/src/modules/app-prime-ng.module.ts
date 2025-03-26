@@ -15,6 +15,8 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { DividerModule } from 'primeng/divider';
 import { InputMaskModule } from 'primeng/inputmask';
 import { PasswordModule } from 'primeng/password';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -33,7 +35,9 @@ import { PasswordModule } from 'primeng/password';
     CheckboxModule,
     DividerModule,
     InputMaskModule,
-    PasswordModule
+    PasswordModule,
+    ReactiveFormsModule,
+    TranslateModule
   ],
   exports: [
     CommonModule,
@@ -51,9 +55,10 @@ import { PasswordModule } from 'primeng/password';
     CheckboxModule,
     DividerModule,
     InputMaskModule,
-    PasswordModule
+    PasswordModule,
+    ReactiveFormsModule,
+    TranslateModule
   ],
-  providers: [],
 })
 export class AppPrimeNgModule {
 }

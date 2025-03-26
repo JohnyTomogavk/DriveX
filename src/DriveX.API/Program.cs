@@ -22,6 +22,7 @@ builder.Services.AddAuthentication();
 builder.Services.AddAuthorization();
 
 builder.Services.AddProblemDetails();
+builder.Services.AddCors();
 
 var app = builder.Build();
 
@@ -30,6 +31,7 @@ app.UseExceptionHandler();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseCors(policy => { policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader(); });
 app.UseFastEndpoints(opt => { opt.Endpoints.RoutePrefix = "api"; });
 
 if (app.Environment.IsDevelopment())

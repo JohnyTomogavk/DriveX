@@ -4,6 +4,13 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { providePrimeNG } from 'primeng/config';
 import { routes } from './app.routes';
 import { AppThemePreset } from '../theme/app-theme';
+import { HttpClient, provideHttpClient, withInterceptors, withInterceptorsFromDi } from '@angular/common/http';
+import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, 'assets/i18/', '.json');
+}
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -17,5 +24,16 @@ export const appConfig: ApplicationConfig = {
       }
     }),
     provideZoneChangeDetection({ eventCoalescing: true, }),
-    provideRouter(routes)]
+    provideRouter(routes),
+    provideHttpClient(withInterceptors([])),
+    provideTranslateService({
+      defaultLanguage: 'ru',
+      useDefaultLang: true,
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+  ]
 };
